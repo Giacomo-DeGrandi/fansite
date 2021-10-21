@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,400;0,700;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
+
+body {
+	margin: 0px;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 16px;
+}
+
+:root {
+	--red: #C7251A;
+	--yellow: #FBE122;
+	--black: #000000;
+	--white: #F4F5F5;
+	--gray: #939196;
+	--picshad: rgba(50, 50, 93, 0.35) 0px 13px 27px -5px, rgba(0, 0, 0, 0.4) 0px 8px 16px -8px;
+	--textshad: 2px 4px 3px rgba(0,0,0,0.3);
+}
+
+header {
+	height: 15vh;
+	background-color: var(--red);
+	border: solid 1px whitesmoke;
+	box-shadow: var(--picshad);
+}
+
+/*  start here */
+
+main {
+	height: 300vh;
+}
+
+.maintitlediv {
+	display: flex;
+
+}
+
+.imgtitle {
+	font-family: 'Bree Serif', serif;
+	font-weight: 700;
+	position: relative;
+	color: var(--white);
+	font-size: 2.8em;
+	background-image: linear-gradient(180deg, rgba(36,0,24,0.3330065302488183) 0%, rgba(0,0,0,0.6859477067194065) 100%);
+	text-shadow: var(--textshad);
+	text-align: center;
+	margin-top: 50vh;
+}
+
+.imgtitle:hover {
+	text-decoration-line: underline;
+	font-size: 2.9em;
+	transition: 0.2s ;
+}
+
+.imgtitle2 {
+	font-family: 'Bree Serif', serif;
+	font-weight: 700;
+	color: var(--white);
+	font-size: 2em;
+	background-image: linear-gradient(180deg, rgba(36,0,24,0.3330065302488183) 0%, rgba(0,0,0,0.6859477067194065) 100%);
+	text-shadow: var(--textshad);
+	text-align: center;
+	margin-top: 21vh;
+}
+
+.imgtitle2:hover {
+	text-decoration-line: underline;
+	font-size: 2.1em;
+	transition: 0.2s ;
+}
+
+.imgtitle3 {
+	font-family: 'Bree Serif', serif;
+	font-weight: 700;
+	color: var(--white);
+	font-size: 1.5625em;
+	background-image: linear-gradient(180deg, rgba(36,0,24,0.3330065302488183) 0%, rgba(0,0,0,0.6859477067194065) 100%);
+	text-shadow: var(--textshad);
+	text-align: left;
+	margin-top: 21vh;
+}
+
+.imgtitle3:hover {
+	text-decoration-line: underline;
+	font-size: 1.6em;
+	transition: 0.2s ;
+}
+
+.imgcrop1 {
+	height: 70vh;
+}
+
+#lighter {
+	color: var(--white);
+	font-size: 0.35em;
+	font-weight: 400;
+	font-style: italic;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-image: none;
+	background-color: var(--red);
+	text-shadow: var(--textshad);
+}
+
+
+#lighter2 {
+	color: var(--white);
+	font-size: 12px;
+	font-weight: 400;
+	font-style: italic;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-image: none;
+	background-color: var(--red);
+	text-shadow: var(--textshad);
+	line-height: -0.5em;
+	text-align: left;
+
+}
+
+.newsimgsub {
+	display: flex;
+}
+
+.imgtext1 {
+	background-image: url(pics/actutop.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 142vh;
+	height: 95vh;
+	box-shadow: var(--picshad);
+	border: solid 1px var(--white);
+	text-align: center;
+}
+
+
+.imgtext2 {
+	background-image: url(pics/defeat.webp);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 67vh;
+	height: 42vh;
+	box-shadow: var(--picshad);
+	text-align: center;
+	border: solid 1px var(--white);
+}
+
+
+.imgtext3 {
+	background-image: url(pics/gunnar.jpg);
+	background-size: contain;
+	background-repeat: no-repeat;
+	width: 75vh;
+	height: 42vh;
+	box-shadow: var(--picshad);
+	text-align: center;
+	border: solid 1px var(--white);
+	background-color: black ;
+}
+
+/* stadium cards */
+
+.stadium {
+		background-image: url(pics/oldtrafford.jpg);
+		height: 80vh;
+		display: flex;
+		align-items: center;
+}
+
+.stadcardcointainer {
+	display: flex;
+	align-items: center;
+	box-shadow: var(--picshad);
+
+}
+
+.stadcard1 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: var(--white);
+	width: 40vh;
+	height: 40vh;
+	padding: 10vh;
+	margin-left: 7vh;
+	margin-top: 2vh;
+	box-shadow: var(--picshad);
+	position: relative;
+	border-radius: 5px;
+	border: solid 1px var(--white);
+}
+
+.stadcard1 img {
+	width: 60vh;
+	object-fit: scale-down;
+	position: relative;
+	bottom: 10vh;
+		border-radius: 5px;
+}
+
+.cardtitle {
+	font-family: 'Bree Serif', serif;
+	font-weight: 700;
+	color: var(--red);
+	font-size: 1.1em;
+	width: 50vh;
+	position: relative;
+	bottom: 12vh;
+}
+
+.stadcard1 hr {
+	color: var(--red);
+	width: 30vh;
+	position: relative;
+	right: 9vh;
+	bottom: 14vh;
+}
+
+/* footer */
+
+footer {
+	color: var(--white);
+	font-size: 1em;
+	background-color: var(--red) ;
+}
+
+footer hr {
+	color: var(--white);
+}
+
+footer vr {
+
+}
+
+footer ul {
+	list-style-type: none;
+	margin-top: 5vh;
+
+}
+
+footer ul li a {
+	text-decoration: none;
+	color: var(--white);
+}
+
+footer ul li a:hover {
+	color: var(--yellow);
+}
+
+
+.mainfooter {
+	display: flex;
+	justify-content: space-between;
+	height: 35vh;
+}
+
+#footleft {
+	display: flex;
+	padding: 4vh;
+	margin-left: 12vh;
+}
+
+#footright {
+	display: flex;
+	padding: 4vh;
+	margin-right: 12vh;
+}
+
+
+#footcopy {
+	padding: 3vh;
+	font-size: 0.8em ;
+	display: flex;
+	justify-content: safe flex-end;
+}
