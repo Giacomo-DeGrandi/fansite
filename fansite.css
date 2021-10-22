@@ -22,37 +22,91 @@ header {
 	height: 15vh;
 	background-color: var(--red);
 	border: solid 1px whitesmoke;
-	box-shadow: var(--picshad);
 }
 
 /*  start here */
 
 main {
-	height: 300vh;
+	height: 1500px;
 }
 
-.maintitlediv {
+.divforaside {
 	display: flex;
+}
+
+.divformainpics {
+	display: flex;
+	flex-direction: column;
+}
+
+.newsimg1 {
+	display: flex;
+	flex-direction: column;
 
 }
 
-.imgtitle {
+.imgcrop1 {
+	position: absolute;
+	width: 900px;
+	margin-left: 60px;
+	display: inline-block;		/* zoom trick */
+  	overflow: hidden;            /* zoom trick */
+}
+
+#imgmain {
+	width: 900px;
+	box-shadow: var(--picshad);
+	text-align: center;
+	display: block;					/* zoom trick */
+  	transition: transform 0.4s;		/* zoom trick */
+}
+
+#imgmain:hover {
+	transform: scale(1.2);
+	transform-origin: 50% 50%;
+}
+
+#imgtitle {
+	display: inline-block;
 	font-family: 'Bree Serif', serif;
 	font-weight: 700;
 	position: relative;
+	margin-top: 300px;
+	width: 900px;
+	text-align: center;
+	margin-left: 60px;
 	color: var(--white);
 	font-size: 2.8em;
 	background-image: linear-gradient(180deg, rgba(36,0,24,0.3330065302488183) 0%, rgba(0,0,0,0.6859477067194065) 100%);
 	text-shadow: var(--textshad);
-	text-align: center;
-	margin-top: 50vh;
 }
 
-.imgtitle:hover {
-	text-decoration-line: underline;
-	font-size: 2.9em;
-	transition: 0.2s ;
+#lighter {
+	color: var(--white);
+	font-size: 0.3em;
+	font-weight: 400;
+	font-family: 'Source Sans Pro', sans-serif;
+	background-color: var(--red);
+	text-shadow: var(--textshad);
+	text-align: center;
+	margin-left: 50px;
+	bottom: 100px;
 }
+
+.newsimgsub {
+	display: flex;
+	justify-content: flex-start;
+	margin-top: 50px;
+}
+
+
+.imgtext2 {
+	display: flex;
+	flex-direction: column;
+	justify content: center;
+
+}
+
 
 .imgtitle2 {
 	font-family: 'Bree Serif', serif;
@@ -62,7 +116,7 @@ main {
 	background-image: linear-gradient(180deg, rgba(36,0,24,0.3330065302488183) 0%, rgba(0,0,0,0.6859477067194065) 100%);
 	text-shadow: var(--textshad);
 	text-align: center;
-	margin-top: 21vh;
+	margin-top: 135px;
 }
 
 .imgtitle2:hover {
@@ -79,7 +133,7 @@ main {
 	background-image: linear-gradient(180deg, rgba(36,0,24,0.3330065302488183) 0%, rgba(0,0,0,0.6859477067194065) 100%);
 	text-shadow: var(--textshad);
 	text-align: left;
-	margin-top: 21vh;
+	margin-top: 135px;
 }
 
 .imgtitle3:hover {
@@ -89,18 +143,7 @@ main {
 }
 
 .imgcrop1 {
-	height: 70vh;
-}
-
-#lighter {
-	color: var(--white);
-	font-size: 0.35em;
-	font-weight: 400;
-	font-style: italic;
-	font-family: 'Source Sans Pro', sans-serif;
-	background-image: none;
-	background-color: var(--red);
-	text-shadow: var(--textshad);
+	height: 500px;
 }
 
 
@@ -108,7 +151,6 @@ main {
 	color: var(--white);
 	font-size: 12px;
 	font-weight: 400;
-	font-style: italic;
 	font-family: 'Source Sans Pro', sans-serif;
 	background-image: none;
 	background-color: var(--red);
@@ -118,31 +160,16 @@ main {
 
 }
 
-.newsimgsub {
-	display: flex;
-}
-
-.imgtext1 {
-	background-image: url(pics/actutop.jpg);
-	background-size: contain;
-	background-repeat: no-repeat;
-	width: 142vh;
-	height: 95vh;
-	box-shadow: var(--picshad);
-	border: solid 1px var(--white);
-	text-align: center;
-}
-
 
 .imgtext2 {
 	background-image: url(pics/defeat.webp);
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: 67vh;
-	height: 42vh;
+	width: 435px;
+	height: 274px;
+	margin-left: 60px;
 	box-shadow: var(--picshad);
 	text-align: center;
-	border: solid 1px var(--white);
 }
 
 
@@ -150,71 +177,173 @@ main {
 	background-image: url(pics/gunnar.jpg);
 	background-size: contain;
 	background-repeat: no-repeat;
-	width: 75vh;
-	height: 42vh;
+	width: 465px;
+	height:275px;
 	box-shadow: var(--picshad);
 	text-align: center;
-	border: solid 1px var(--white);
 	background-color: black ;
 }
 
+
+
+
+/* aside */
+
+
+aside {
+	text-align: right;
+	background-color: var(--white);
+	width: 350px;
+	height: 720px;
+	box-shadow: var(--picshad);
+	padding: 10px;
+
+}
+
+aside ul {
+	text-align: left;
+	list-style-type: none;
+}
+
+aside ul li {
+	display: flex;
+}
+
+aside ul li img {
+	width: 64px;
+	right: 30px;
+}
+
+aside ul li a {
+	text-decoration: none;
+
+}
+
+
+
 /* stadium cards */
+
+
+
 
 .stadium {
 		background-image: url(pics/oldtrafford.jpg);
-		height: 80vh;
+		height: 500px;
 		display: flex;
 		align-items: center;
 }
 
-.stadcardcointainer {
+.stadcardcontainer {
 	display: flex;
-	align-items: center;
-	box-shadow: var(--picshad);
-
 }
 
 .stadcard1 {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: space-between;
 	background-color: var(--white);
-	width: 40vh;
-	height: 40vh;
-	padding: 10vh;
-	margin-left: 7vh;
-	margin-top: 2vh;
+	width: 320px;
+	height: 400px;
+	margin-left: 40px;
 	box-shadow: var(--picshad);
-	position: relative;
 	border-radius: 5px;
-	border: solid 1px var(--white);
+
 }
 
 .stadcard1 img {
-	width: 60vh;
+	width: 320px;
 	object-fit: scale-down;
 	position: relative;
-	bottom: 10vh;
-		border-radius: 5px;
 }
 
+.stadcard2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--white);
+	width: 320px;
+	height: 400px;
+	margin-left: 90px;
+	box-shadow: var(--picshad);
+	border-radius: 5px;
+
+}
+
+.imgcrop2 {
+	width: 320px;
+	height: 180px;
+}
+
+.imgcrop2 img {
+	object-fit: cover;
+	height: 180px;
+	width: 320px;
+}
+
+.stadcard1:hover {
+	border: solid 1px var(--white);
+	border-radius: 6px;
+}
+
+.stadcard3 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	background-color: var(--white);
+	width: 320px;
+	height: 400px;
+	margin-left: 90px;
+	box-shadow: var(--picshad);
+	border-radius: 5px;
+
+}
+
+.stadcard3 img {
+	object-fit: cover;
+	width: 320px;
+	height: 180px;
+}
+
+.imgcrop3 img {
+	object-fit: cover;
+	height: 180px;
+	width: 320px;
+}
+
+
 .cardtitle {
+	position: relative;
 	font-family: 'Bree Serif', serif;
 	font-weight: 700;
 	color: var(--red);
 	font-size: 1.1em;
-	width: 50vh;
-	position: relative;
-	bottom: 12vh;
+	width: 270px;
+	padding: 10px;
+	bottom: 10px;
 }
 
-.stadcard1 hr {
+
+.stadcard1.stadcard2.stadcard3 hr {
 	color: var(--red);
-	width: 30vh;
+	width: 50px;
 	position: relative;
-	right: 9vh;
-	bottom: 14vh;
+	right: 80px; 
 }
+
+#cardsubtitle {	
+	font-family: 'Source Sans Pro', sans-serif;
+	color: var(--black);
+	position: relative;
+	bottom: 50px;
+	font-size: 1em;
+	font-weight: 300;
+	width: 300px;
+}
+
+
 
 /* footer */
 
@@ -234,7 +363,7 @@ footer vr {
 
 footer ul {
 	list-style-type: none;
-	margin-top: 5vh;
+	margin-top: 20px;
 
 }
 
@@ -251,24 +380,24 @@ footer ul li a:hover {
 .mainfooter {
 	display: flex;
 	justify-content: space-between;
-	height: 35vh;
+	height: 220px;
 }
 
 #footleft {
 	display: flex;
-	padding: 4vh;
-	margin-left: 12vh;
+	padding: 10px;
+	margin-left: 60px;
 }
 
 #footright {
 	display: flex;
-	padding: 4vh;
-	margin-right: 12vh;
+	padding: 10px;
+	margin-right: 60px;
 }
 
 
 #footcopy {
-	padding: 3vh;
+	padding: 5px;
 	font-size: 0.8em ;
 	display: flex;
 	justify-content: safe flex-end;
